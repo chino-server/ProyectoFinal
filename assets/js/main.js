@@ -76,8 +76,9 @@ function showProducts (categoryName){
 
 function tarjetas () {
   
-  fetch (`http://127.0.0.1:5500/data.json`)
-  .then ((res)=> console.log (res))
+  fetch (`assets/js/data.json`)
+  .then ((res)=> res.json ())
+  .then ((data)=> console.log (data))
   
 }
 
