@@ -75,11 +75,20 @@ function showProducts (categoryName){
 
 //FETCH CON RUTAS RELATIVAS 
 
+<<<<<<< HEAD
 function tarjetas (){
   fetch ("assets/js/data.json")
   .then ((res)=>res.json() )
   .then ((data) => console.log (data))
 
+=======
+function tarjetas () {
+  
+  fetch (`assets/js/data.json`)
+  .then ((res)=> res.json ())
+  .then ((data)=> console.log (data))
+  
+>>>>>>> faf786c3724c41b1ef89ee1170fe1ecb495cfd35
 }
 
 
