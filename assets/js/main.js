@@ -7,7 +7,7 @@ loadData ()
 function loadData (){
       loadCategoria ()
      showCategorias ()
-     tarjetas ()
+    cargarListadoCantidad ()
   
 
     
@@ -17,7 +17,6 @@ function loadData (){
 //Funcion que extrae las categorias en este caso los tipo de solicitud
 
 function loadCategoria () {
-
   const categorias = pericasJson.map (element => element["Tipo de Solicitud"])
   const categoriasSet = new Set (categorias)
   const categoriasUnicas = [...categoriasSet]
@@ -75,21 +74,16 @@ function showProducts (categoryName){
 
 //FETCH CON RUTAS RELATIVAS 
 
-<<<<<<< HEAD
-function tarjetas (){
-  fetch ("assets/js/data.json")
-  .then ((res)=>res.json() )
-  .then ((data) => console.log (data))
-
-=======
-function tarjetas () {
+function cargarListadoCantidad () {
   
   fetch (`assets/js/data.json`)
   .then ((res)=> res.json ())
   .then ((data)=> console.log (data))
-  
->>>>>>> faf786c3724c41b1ef89ee1170fe1ecb495cfd35
 }
+
+
+  
+
 
 
 
