@@ -78,11 +78,15 @@ function cargarListadoCantidad () {
   
   fetch (`assets/js/data.json`)
   .then ((res)=> res.json ())
-  .then ((data)=> console.log (data))
+  .then ((data)=> data.forEach((tipoSolicitud)=>{
+    console.table (tipoSolicitud.Legajo)
+  }))
+  
 }
 
 
-  
+
+
 
 
 
