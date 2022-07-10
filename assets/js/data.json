@@ -568,5 +568,20 @@
   "Duración (dias)": null,
   "Final Admin": "No",
   "Cantidad de Evidencias": 1
+ },
+ {"Id": 11931,
+  "Solicitado": "06/11/2022",
+  "Solicitante": "UNIDAD FISCAL DE ATENTADOS CONTRA LAS PERSONAS",
+  "Legajo": "S-040715/2022 - CARDENAS JUAN FRANKLIN GABRIEL/ AMENAZAS AGRAVADAS - ART. 149 BIS PÁR. 1 PARTE 2 VICT: BARROS SARA IGNACIA",
+  "Numero": "34266054",
+  "Tipo de Solicitud": "Adquisición Forense de Datos de Dispositivos (Teléfonos, Tablets, GPS)",
+  "Estado": "Sin Turno",
+  "Responsable": "Pablo Antonio Garcia",
+  "Fecha Turno": "06/15/2022",
+  "Fecha Resuelto": null,
+  "Duración (dias)": null,
+  "Final Admin": "No",
+  "Cantidad de Evidencias": 1
  }
+ 
  ]

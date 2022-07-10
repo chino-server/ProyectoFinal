@@ -1,4 +1,5 @@
 let categoriasSistema = []
+
 console.log ("que tiene esto")
 
 //Función General 
@@ -7,9 +8,9 @@ loadData ()
 function loadData (){
       loadCategoria ()
      showCategorias ()
-    cargarListadoCantidad ()
-  
-
+     mostrarCantidadAsignado ()
+     mostrarCantidadConfirmados()
+      
     
       
 }
@@ -37,7 +38,7 @@ function showCategorias (){
   categoriasSistema.forEach (element =>{
     const btn = document.createElement ("button")
     btn.classList.add ("btn-outline-primary")
-    btn.innerText = element.nombre 
+    btn.innerText = element.nombre
    
 
     btn.addEventListener ("click", ()=>{
@@ -68,26 +69,45 @@ function showProducts (categoryName){
 
     productList.appendChild (div)
     
-
   })
 }
 
-//FETCH CON RUTAS RELATIVAS 
+//MOSTRAR TARJETAS DE CANTIDADES DE ESTADOS CON TURNO ASIGNADOS 
 
-function cargarListadoCantidad () {
+function mostrarCantidadAsignado () {
+
+  let count = 0
+  let cantidades= pericasJson.filter ((d)=> {
+    count++;
+    return d.Estado === "Turno Asignado"
+    
+  })
+  let nodoCantidades = document.getElementById ("cantidad")
+  nodoCantidades.innerText= cantidades.length
+
+  let nodoPortentaje = document.getElementById ("cantidad2")
+  nodoPortentaje.innerText =  parseInt (cantidades.length * 100 /count + "%") 
+  console.log (cantidades.length)
   
-  fetch (`assets/js/data.json`)
-  .then ((res)=> res.json ())
-  .then ((data)=> data.forEach((tipoSolicitud)=>{
-    console.table (tipoSolicitud.Legajo)
-  }))
+   
+}
+
+//MOSTRAR TARJETAS DE CANTIDADES TOTALES 
+
+function mostrarCantidadConfirmados(){
+  let countTotal = 0
+  let cantidadTotal= pericasJson.filter ((d)=> {
+    countTotal++;
+    return d.Estado === "Turno Confirmado"
+  })
+
+  console.log (cantidadTotal.length)
+
+  let nodoConTurno = document.getElementById ("cantidadConfirmado")
+  nodoConTurno.innerText = cantidadTotal.length
   
 }
 
 
-
-
-
-
-
+//MOSTRAR TARJETAS DE CANTIDADES TOTALES 
 
