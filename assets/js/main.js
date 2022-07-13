@@ -10,6 +10,7 @@ function loadData (){
      showCategorias ()
      mostrarCantidadAsignado ()
      mostrarCantidadConfirmados()
+     mostrarCantidadSinTurno()
       
     
       
@@ -87,9 +88,7 @@ function mostrarCantidadAsignado () {
 
   let nodoPortentaje = document.getElementById ("cantidad2")
   nodoPortentaje.innerText =  parseInt (cantidades.length * 100 /count + "%") 
-  console.log (cantidades.length)
   
-   
 }
 
 //MOSTRAR TARJETAS DE CANTIDADES TOTALES 
@@ -101,13 +100,33 @@ function mostrarCantidadConfirmados(){
     return d.Estado === "Turno Confirmado"
   })
 
-  console.log (cantidadTotal.length)
 
   let nodoConTurno = document.getElementById ("cantidadConfirmado")
   nodoConTurno.innerText = cantidadTotal.length
+
+  let nodoPortentaje = document.getElementById ("cantidades3")
+  nodoPortentaje.innerText =  parseInt (cantidadTotal.length * 100 /countTotal + "%") 
+ 
+  
   
 }
 
 
-//MOSTRAR TARJETAS DE CANTIDADES TOTALES 
+//MOSTRAR TARJETAS DE CANTIDADES TOTALES SIN TURNO
 
+function mostrarCantidadSinTurno(){
+  let countTotal = 0
+  let cantidadTotal= pericasJson.filter ((d)=> {
+    countTotal++;
+    return d.Estado === "Sin Turno"
+  })
+
+
+  let nodoConTurno = document.getElementById ("cantidadSinTurno")
+  nodoConTurno.innerText = cantidadTotal.length
+  let nodoPortentaje = document.getElementById ("cantidad4")
+  nodoPortentaje.innerText =  parseInt (cantidadTotal.length * 100 /countTotal + "%") 
+ 
+  
+  
+}

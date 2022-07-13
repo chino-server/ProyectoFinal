@@ -9,23 +9,72 @@
    <link href="https://fonts.gstatic.com" rel="preconnect">
    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> 
   
-  <title>Document</title>
+  <title>Estadisticas</title>
 </head>
 <body>
-  <main>
+  <div class="pagetitle">
+    <h1>Estadísticas de Solicitudes</h1>
+    <nav>
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+        <li class="breadcrumb-item">Charts</li>
+        <li class="breadcrumb-item active">Chart.js</li>
+      </ol>
+    </nav>
+  </div>
+  <p>Gráficos estadísticos de carga de trabajo <a href="https://ecif.ar/accounts/login/?next=/" target="_blank">para agregar registros</a> ingresar al sistema.</p>
+  <main id="main" class="main">
     <section class="section">
       <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Line Chart</h5>
 
-        <div class="col-lg-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Line Chart</h5>
-   
-             <canvas id="chart1" style="max-height: 400px;">  </canvas>
+            <!-- Line Chart -->
+            <canvas id="chart1" style="max-height: 400px; display: block; box-sizing: border-box; height: 239px; width: 478px;" width="956" height="478"></canvas>
+            
+            <!-- End Line CHart -->
+
+          </div>
+        </div>
+       </div> 
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Bar CHart</h5>
+
+            <!-- Bar Chart -->
+            <canvas id="Chart2" style="max-height: 400px; display: block; box-sizing: border-box; height: 400px; width: 653px;" width="1306" height="800"></canvas>
+           
+            <!-- End Bar CHart -->
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Line Chart</h5>
+
+            <!-- Line Chart -->
+            <canvas id="chart3" style="max-height: 400px; display: block; box-sizing: border-box; height: 400px; width: 653px;" width="1306" height="800"></canvas>
+            
+            <!-- End Line CHart -->
+
+          </div>
+        </div>
+      </div>
+    
+      
+
+
   </main>
+    
  
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/estadisticas.js "></script>
+  
 </body>
 
 </html> 
